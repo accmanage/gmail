@@ -1,0 +1,21 @@
+{
+  "name": "secure-admin-2fa-inventory",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Secure Admin - 2FA Inventory & OTP Access Management System",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "prisma:generate": "npm --workspace apps/backend run prisma:generate",
+    "prisma:migrate": "npm --workspace apps/backend run prisma:migrate"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
